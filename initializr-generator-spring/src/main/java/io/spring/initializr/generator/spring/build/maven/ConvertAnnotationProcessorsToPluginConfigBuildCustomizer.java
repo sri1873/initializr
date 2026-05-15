@@ -88,7 +88,7 @@ class ConvertAnnotationProcessorsToPluginConfigBuildCustomizer implements BuildC
 			if (configurationProcessor.getScope().equals(DependencyScope.ANNOTATION_PROCESSOR)) {
 				annotationProcessors.add(configurationProcessor);
 			}
-			else {
+			else if (configurationProcessor.getScope().equals(DependencyScope.TEST_ANNOTATION_PROCESSOR)) {
 				testAnnotationProcessors.add(configurationProcessor);
 			}
 		}
